@@ -35,6 +35,6 @@ Bạn muốn tham gia phát triển? Cứ thoải mái fork repo, tạo pull req
 
 ## Liên Hệ
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://fb.com/datdoreal)  |  [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@datdooooo)
-📧 Email: [24021403@vnu.edu.vn](mailto:your.email@example.com)  
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:24021403@vnu.edu.vn)  
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/datdo13099)
 
