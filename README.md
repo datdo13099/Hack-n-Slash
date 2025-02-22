@@ -21,6 +21,9 @@
 - Sử dụng kỹ năng đặc biệt bằng **Q, E**
 
 ## Cài Đặt
+
+### Tải Xuống
+[![Download](https://img.shields.io/badge/DOWNLOAD-279-yellow?style=for-the-badge)](https://github.com/datdo13099/Hack-n-Slash/releases)
 ```sh
 git clone https://github.com/datdo13099/Hack-n-Slash.git
 cd Hack-n-Slash
@@ -31,6 +34,7 @@ Biên dịch và chạy game tùy vào công cụ bạn dùng.
 Bạn muốn tham gia phát triển? Cứ thoải mái fork repo, tạo pull request hoặc report bug! 🔥
 
 ## Liên Hệ
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://fb.com/datdoreal)  |  [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@datdooooo)
 📧 Email: [24021403@vnu.edu.vn](mailto:your.email@example.com)  
-🌐 GitHub: [github.com/datdo13099](https://github.com/datdo13099)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/datdo13099)
 
