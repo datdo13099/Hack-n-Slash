@@ -1,6 +1,6 @@
 # Hack 'n Slash
 
-![Hack 'n Slash Banner](https://opengameart.org/sites/default/files/styles/medium/public/preview_16.png)
+![Hack 'n Slash Banner](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/246070/header.jpg?t=1727389160)
 
 ## Giới Thiệu
 🚀 **Hack 'n Slash** là một tựa game hành động tốc độ cao, được phát triển bởi sinh viên **UET** với đam mê cháy bỏng dành cho game indie. Người chơi sẽ điều khiển một chiến binh mạnh mẽ, chặt chém kẻ địch với những combo đẹp mắt và kỹ năng đặc biệt.
@@ -33,3 +33,4 @@ Bạn muốn tham gia phát triển? Cứ thoải mái fork repo, tạo pull req
 ## Liên Hệ
 📧 Email: [24021403@vnu.edu.vn](mailto:your.email@example.com)  
 🌐 GitHub: [github.com/datdo13099](https://github.com/datdo13099)
+
