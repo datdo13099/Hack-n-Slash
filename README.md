@@ -27,6 +27,6 @@ biên dịch và chạy game tùy vào công cụ mày dùng.
 mày muốn tham gia phát triển? cứ thoải mái fork repo, tạo pull request hoặc report bug! 🔥
 
 ## liên hệ
-📧 email: [your.email@example.com](mailto:24021403@vnu.edu.vn)  
+📧 email: [24021403@vnu.edu.vn](mailto:24021403@vnu.edu.vn)  
 🌐 github: [github.com/datdo13099](https://github.com/datdo13099)
 
