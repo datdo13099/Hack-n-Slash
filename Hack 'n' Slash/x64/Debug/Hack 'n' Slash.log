@@ -1,6 +1,0 @@
-﻿  globals.cpp
-C:\Users\datdo\Desktop\Hack 'n' Slash\Hack 'n' Slash\globals.cpp(4,27): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\datdo\Desktop\Hack 'n' Slash\Hack 'n' Slash\globals.cpp(18,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Hack 'n' Slash.vcxproj -> C:\Users\datdo\Desktop\Hack 'n' Slash\x64\Debug\Hack 'n' Slash.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
