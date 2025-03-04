@@ -1,0 +1,13 @@
+# bỏ file build & cấu hình visual studio
+.vs/
+*.sdf
+*.suo
+*.user
+*.vcxproj.user
+*.pdb
+*.ilk
+*.obj
+*.tlog
+*/Debug/
+*/Release/
+Thumbs.db
