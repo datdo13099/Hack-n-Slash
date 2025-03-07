@@ -3,7 +3,7 @@
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
 #include "cleanup.h"
-#include "res_path.h"
+#include "res_path.h" 
 #include "drawing_functions.h"
 #include "globals.h"
 #include "game.h"
