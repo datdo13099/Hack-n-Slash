@@ -1,30 +1,36 @@
-﻿#ifndef GAME  // Kiểm tra nếu GAME chưa được định nghĩa
-#define GAME  // Định nghĩa GAME để tránh include file nhiều lần
+﻿#ifndef GAME
+#define GAME
 
-#include "globals.h"          // Bao gồm file header chứa các định nghĩa toàn cục
-#include "hero.h"             // Bao gồm file header của lớp Hero
-#include "wall.h"             // Bao gồm file header của lớp Wall
-#include "keyboardInput.h"    // Bao gồm file header của lớp KeyboardInput
-#include "drawing_functions.h" // Bao gồm file header chứa các hàm hỗ trợ vẽ
+#include "globals.h"            // Include file header chứa các biến toàn cục
+#include "hero.h"               // Include file header của lớp Hero
+#include "wall.h"               // Include file header của lớp Wall
+#include "glob.h"               // Include file header của lớp Glob
+#include "keyboardInput.h"      // Include file header xử lý đầu vào từ bàn phím
+#include "drawing_functions.h"  // Include file header chứa các hàm vẽ
 
-class Game  // Định nghĩa lớp Game để quản lý toàn bộ trò chơi
+// Định nghĩa lớp Game
+class Game
 {
 public:
-    AnimationSet* heroAnimSet;  // Tập hợp animation cho Hero
-    AnimationSet* wallAnimSet;  // Tập hợp animation cho Wall
+    // Khai báo các con trỏ tới tập hợp animation
+    AnimationSet* heroAnimSet;  // Tập hợp animation cho nhân vật chính (hero)
+    AnimationSet* globAnimSet;  // Tập hợp animation cho kẻ địch (glob)
+    AnimationSet* wallAnimSet;  // Tập hợp animation cho tường (wall)
 
-    SDL_Texture* backgroundImage;  // Texture của hình nền trò chơi
+    SDL_Texture* backgroundImage; // Con trỏ tới texture của hình nền
 
-    Hero* hero;            // Con trỏ tới đối tượng Hero (nhân vật chính)
-    KeyboardInput heroInput;  // Đối tượng KeyboardInput để điều khiển Hero
+    Hero* hero;                   // Con trỏ tới đối tượng nhân vật chính
+    KeyboardInput heroInput;      // Đối tượng xử lý đầu vào từ bàn phím cho hero
 
-    list<Entity*> walls;  // Danh sách các con trỏ tới Entity đại diện cho các bức tường
+    list<Entity*> enemies;        // Danh sách các thực thể kẻ địch
+    list<Entity*> walls;          // Danh sách các thực thể tường
 
-    Game();   // Hàm khởi tạo của lớp Game
-    ~Game();  // Hàm hủy để giải phóng tài nguyên
+    // Khai báo các hàm thành viên
+    Game();                       // Hàm khởi tạo trò chơi
+    ~Game();                      // Hàm hủy trò chơi
 
-    void update();  // Hàm cập nhật trạng thái trò chơi mỗi frame
-    void draw();    // Hàm vẽ các thành phần của trò chơi lên màn hình
+    void update();                // Hàm cập nhật trạng thái trò chơi
+    void draw();                  // Hàm vẽ trò chơi lên màn hình
 };
 
-#endif  // Kết thúc khối điều kiện định nghĩa GAME
+#endif
