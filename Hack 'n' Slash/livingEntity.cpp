@@ -23,6 +23,7 @@ void LivingEntity::updateHitBox()
         }
     }
 }
+
 void LivingEntity::updateInvincibleTimer()
 {
     if (invincibleTimer > 0)
@@ -30,11 +31,17 @@ void LivingEntity::updateInvincibleTimer()
         invincibleTimer -= TimeController::timeController.dT;
     }
 }
+
 void LivingEntity::draw()
 {
+    // kiểm tra nếu có frame hiện tại và thực thể đang hoạt động
     if (currentFrame != NULL && active)
     {
-        currentFrame->Draw(animSet->spriteSheet, x, y);
+        // nếu đang trong trạng thái bất tử và có sprite trắng, vẽ bằng sprite trắng
+        if (invincibleTimer > 0 && animSet->whiteSpriteSheet != NULL)
+            currentFrame->Draw(animSet->whiteSpriteSheet, x, y);
+        else // nếu không thì vẽ bằng sprite thường
+            currentFrame->Draw(animSet->spriteSheet, x, y);
     }
     // vẽ hộp va chạm
     if (solid && Globals::debugging)
