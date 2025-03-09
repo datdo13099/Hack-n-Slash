@@ -17,13 +17,20 @@ public:
     AnimationSet* globAnimSet;  // Tập hợp animation cho kẻ địch (glob)
     AnimationSet* wallAnimSet;  // Tập hợp animation cho tường (wall)
 
-    SDL_Texture* backgroundImage; // Con trỏ tới texture của hình nền
+    SDL_Texture* backgroundImage; // con trỏ tới texture của hình nền chính
+    SDL_Texture* splashImage; // con trỏ tới texture của hình splash 
+    SDL_Texture* overlayImage; // con trỏ tới texture của lớp phủ
+
+    SDL_Texture* scoreTexture = NULL; // con trỏ tới texture của điểm số
 
     Hero* hero;                   // Con trỏ tới đối tượng nhân vật chính
     KeyboardInput heroInput;      // Đối tượng xử lý đầu vào từ bàn phím cho hero
 
     list<Entity*> enemies;        // Danh sách các thực thể kẻ địch
     list<Entity*> walls;          // Danh sách các thực thể tường
+
+    bool splashShowing;
+    float overlayTimer;
 
     // Khai báo các hàm thành viên
     Game();                       // Hàm khởi tạo trò chơi
