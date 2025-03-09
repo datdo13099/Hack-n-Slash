@@ -7,9 +7,9 @@ const float Globals::PI = 3.14159;  // Giá trị PI dùng cho các phép tính 
 bool Globals::debugging = false;  // Chế độ debug, mặc định là tắt (false)
 
 // Các biến liên quan đến SDL
-int Globals::ScreenWidth = 1280;    // Chiều rộng màn hình mặc định là 640 pixel
-int Globals::ScreenHeight = 704;   // Chiều cao màn hình mặc định là 352 pixel
-int Globals::ScreenScale = 1;      // Tỷ lệ phóng to màn hình mặc định là 2
+int Globals::ScreenWidth = 1280;   
+int Globals::ScreenHeight = 704;   
+int Globals::ScreenScale = 1;   
 SDL_Renderer* Globals::renderer = NULL;  // Con trỏ tới renderer của SDL, khởi tạo là NULL
 
 // Hàm cắt bỏ phần tiêu đề của chuỗi dữ liệu
