@@ -79,7 +79,7 @@ void Hero::slash()
         moving = false;                          // Ngừng di chuyển
         frameTimer = 0;                          // Đặt lại bộ đếm khung hình
         changeAnimation(HERO_STATE_SLASH, true); // Chuyển sang animation tấn công
-        // TODO: Thêm âm thanh tấn công!
+        SoundManager::soundManager.playSound("swing");
     }
 }
 
@@ -97,7 +97,7 @@ void Hero::dash()
         invincibleTimer = 0.1;                   // Thời gian bất tử ngắn (0.1 giây)
 
         changeAnimation(HERO_STATE_DASH, true);  // Chuyển sang animation lướt nhanh
-        // TODO: Thêm âm thanh lướt nhanh!
+        SoundManager::soundManager.playSound("dash");
     }
 }
 
@@ -251,7 +251,7 @@ void Hero::updateDamages()
                     if (hp > 0)
                     {
                         invincibleTimer = 0.3;  // Đặt thời gian bất tử là 0.3 giây
-                        // TODO: Phát âm thanh bị trúng đòn
+                        SoundManager::soundManager.playSound("hit");
                     }
 
                     // Tính góc và lực đẩy khi bị trúng

@@ -3,6 +3,7 @@
 
 #include "globals.h"       // Bao gồm file header chứa các định nghĩa toàn cục
 #include "livingEntity.h"  // Bao gồm file header của lớp LivingEntity, lớp cha của Hero
+#include "soundManager.h" //thêm sound
 
 class Hero : public LivingEntity  // Định nghĩa lớp Hero, kế thừa công khai từ LivingEntity
 {

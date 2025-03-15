@@ -3,6 +3,7 @@
 
 #include <cstdlib>              // Thư viện chuẩn C để sử dụng rand()
 #include "livingEntity.h"       // Include file header của lớp LivingEntity
+#include "soundManager.h"       // Thêm âm thanh
 
 // Định nghĩa lớp Glob, kế thừa từ LivingEntity
 class Glob : public LivingEntity

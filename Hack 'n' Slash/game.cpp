@@ -11,6 +11,20 @@ Game::Game()
     splashShowing = true;
     overlayTimer = 2;
 
+    //load sound
+    SoundManager::soundManager.loadSound("hit", resPath + "Randomize2.wav");
+    SoundManager::soundManager.loadSound("enemyHit", resPath + "Hit_Hurt9.wav");
+    SoundManager::soundManager.loadSound("swing", resPath + "Randomize21.wav");
+    SoundManager::soundManager.loadSound("dash", resPath + "dash.wav");
+    SoundManager::soundManager.loadSound("growl", resPath + "Randomize34.wav");
+    SoundManager::soundManager.loadSound("enemyDie", resPath + "Randomize41.wav");
+
+    song = Mix_LoadMUS(string(resPath + "Fatal Theory.wav").c_str());
+    if (song != NULL)
+    {
+        Mix_PlayMusic(song, -1);
+    }
+
     // Danh sách các loại nhóm dữ liệu mà frame có thể có
     list<DataGroupType> dataGroupTypes;
 
@@ -117,6 +131,9 @@ Game::~Game()
     cleanup(backgroundImage);                               // Dọn dẹp hình nền
     cleanup(splashImage); // Giải phóng bộ nhớ của màn hình chào  
     cleanup(overlayImage); // Giải phóng bộ nhớ của lớp phủ (overlay)  
+
+    Mix_PausedMusic();
+    Mix_FreeMusic(song);
 
     if (scoreTexture != NULL) // Kiểm tra nếu scoreTexture tồn tại thì mới giải phóng  
         cleanup(scoreTexture);

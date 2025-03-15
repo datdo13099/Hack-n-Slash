@@ -163,7 +163,7 @@ void Glob::die()
     moving = false;                                       // Dừng di chuyển
     state = GLOB_STATE_DEAD;                              // Chuyển sang trạng thái đã chết
     changeAnimation(state, true);                         // Chuyển sang animation chết
-    // TODO: Thêm âm thanh khi chết cho kẻ địch!
+    SoundManager::soundManager.playSound("enemyDie");
 
     Glob::globsKilled++;                                  // Tăng số lượng Glob đã bị tiêu diệt
 }
@@ -324,7 +324,7 @@ void Glob::updateDamages()
 
                     if (hp > 0)
                     {
-                        // TODO: Phát âm thanh bị thương
+                        SoundManager::soundManager.playSound("enemyHit");
                         invincibleTimer = 0.1;              // Thời gian bất tử ngắn
                     }
                     // Tính góc bị đẩy lùi

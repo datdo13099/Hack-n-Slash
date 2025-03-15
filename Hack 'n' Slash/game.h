@@ -7,11 +7,14 @@
 #include "glob.h"               // Include file header của lớp Glob
 #include "keyboardInput.h"      // Include file header xử lý đầu vào từ bàn phím
 #include "drawing_functions.h"  // Include file header chứa các hàm vẽ
+#include "soundManager.h"
 
 // Định nghĩa lớp Game
 class Game
 {
 public:
+    Mix_Music* song;
+
     // Khai báo các con trỏ tới tập hợp animation
     AnimationSet* heroAnimSet;  // Tập hợp animation cho nhân vật chính (hero)
     AnimationSet* globAnimSet;  // Tập hợp animation cho kẻ địch (glob)
