@@ -7,9 +7,9 @@ const float Globals::PI = 3.14159;  // Giá trị PI dùng cho các phép tính 
 bool Globals::debugging = false;  // Chế độ debug, mặc định là tắt (false)
 
 // Các biến liên quan đến SDL
-int Globals::ScreenWidth = 1280;   
-int Globals::ScreenHeight = 704;   
-int Globals::ScreenScale = 1;   
+int Globals::ScreenWidth = 1280;
+int Globals::ScreenHeight = 704;
+int Globals::ScreenScale = 1;
 SDL_Renderer* Globals::renderer = NULL;  // Con trỏ tới renderer của SDL, khởi tạo là NULL
 
 // Hàm cắt bỏ phần tiêu đề của chuỗi dữ liệu
@@ -22,3 +22,5 @@ string Globals::clipOffDataHeader(string data)
     }
     return data;  // Trả về chuỗi đã được xử lý
 }
+
+SDL_Rect Globals::camera;
