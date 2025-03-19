@@ -19,6 +19,7 @@ public:
     int direction;            // Hướng hiện tại của thực thể
     bool solid = true;        // Thực thể này có rắn không, các vật khác có thể đi xuyên qua không
     bool collideWithSolids = true;  // Thực thể có va chạm với các vật rắn khác không
+    bool dieOnSolids = false; //hữu ích nếu entity cần chết khi chạm vật rắn (ví dụ: đạn chạm tường)
     bool active = true;       // Thực thể đang bật hay tắt
     string type = "entity";   // Loại thực thể (ví dụ: hero, enemy, wall, v.v.)
     bool moving;              // Thực thể có đang di chuyển không
@@ -50,15 +51,18 @@ public:
 
     virtual void changeAnimation(int newState, bool resetFrameToBeginning) = 0;  // Hàm ảo thuần túy: thay đổi animation
     virtual void updateCollisions();  // Hàm cập nhật va chạm với các vật thể trong thế giới
+    virtual void crashOntoSolid() { ; } //nếu dieOnSolids là true, hàm này xử lý việc chết
 
-    // CÁC HÀM HỖ TRỢ (HELP FUNCTIONS)
-    static float distanceBetweenTwoRects(SDL_Rect& r1, SDL_Rect& r2);  // Tính khoảng cách giữa hai hình chữ nhật
-    static float distanceBetweenTwoEntities(Entity* e1, Entity* e2);   // Tính khoảng cách giữa hai thực thể
-    static float angleBetweenTwoEntities(Entity* e1, Entity* e2);      // Tính góc giữa hai thực thể
-    static bool checkCollision(SDL_Rect cbox1, SDL_Rect cbox2);        // Kiểm tra va chạm giữa hai hộp va chạm
-    static int angleToDirection(float angle);                          // Chuyển đổi góc thành hướng
-    static float angleBetweenTwoPoints(float cx1, float cy1, float cx2, float cy2);  // Tính góc giữa hai điểm
-    static float angleBetweenTwoRects(SDL_Rect& r1, SDL_Rect& r2);     // Tính góc giữa hai hình chữ nhật
+    //HÀM HỖ TRỢ
+    static float SweptAABB(SDL_Rect movingBox, float vx, float vy, SDL_Rect otherBox, float& normalX, float& normalY);
+    static float distanceBetweenTwoRects(SDL_Rect& r1, SDL_Rect& r2);
+    static float distanceBetweenTwoEntities(Entity* e1, Entity* e2);
+    static float distanceBetweenTwoPoints(float cx1, float cy1, float cx2, float cy2);
+    static float angleBetweenTwoEntities(Entity* e1, Entity* e2);
+    static bool checkCollision(SDL_Rect cbox1, SDL_Rect cbox2);
+    static int angleToDirection(float angle);
+    static float angleBetweenTwoPoints(float cx1, float cy1, float cx2, float cy2);
+    static float angleBetweenTwoRects(SDL_Rect& r1, SDL_Rect& r2);
 
     // Danh sách toàn cục các thực thể để tham chiếu bất cứ lúc nào
     static list<Entity*> entities;
@@ -68,4 +72,4 @@ public:
     static void removeAllFromList(list<Entity*>* entityList, bool deleteEntities);  // Xóa tất cả thực thể khỏi danh sách
 };
 
-#endif  // Kết thúc khối điều kiện định nghĩa ENTITY
+#endif
