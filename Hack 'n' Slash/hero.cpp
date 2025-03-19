@@ -37,7 +37,7 @@ Hero::Hero(AnimationSet* animSet)
     y = Globals::ScreenHeight / 2; // Đặt vị trí y ở giữa màn hình
     moveSpeed = 0;                 // Tốc độ di chuyển ban đầu là 0
     moveSpeedMax = 80;             // Tốc độ tối đa là 80
-    hp = hpMax = 20;               // Máu hiện tại và tối đa là 20
+    hp = hpMax = 200;               // Máu hiện tại và tối đa là 200
     damage = 0;                    // Sát thương mặc định là 0
     collisionBoxW = 20;            // Chiều rộng hộp va chạm
     collisionBoxH = 24;            // Chiều cao hộp va chạm
@@ -72,9 +72,9 @@ void Hero::update()
 }
 
 // Hàm thực hiện hành động tấn công
-void Hero::slash()
+void Hero::slash() 
 {
-    if (hp > 0 && (state == HERO_STATE_MOVE || state == HERO_STATE_IDLE))
+    if (hp > 0 && (state == HERO_STATE_MOVE || state == HERO_STATE_IDLE)) 
     {
         moving = false;                          // Ngừng di chuyển
         frameTimer = 0;                          // Đặt lại bộ đếm khung hình
@@ -89,13 +89,14 @@ void Hero::dash()
     if (hp > 0 && (state == HERO_STATE_MOVE || state == HERO_STATE_IDLE))
     {
         moving = false;                          // Ngừng di chuyển
-        frameTimer = 0;                          // Đặt lại bộ đếm khung hình
-
-        // Đẩy Hero theo hướng đang di chuyển
-        slideAngle = angle;                      // Góc trượt bằng góc hiện tại
-        slideAmount = 300;                       // Lượng trượt là 300 đơn vị
-        invincibleTimer = 0.1;                   // Thời gian bất tử ngắn (0.1 giây)
-
+        frameTimer = 0;
+        slideAngle = angle;
+        slideAmount = 300;
+        // Chỉ đặt invincibleTimer nếu hero chưa bất tử
+        if (invincibleTimer < 999999)
+        {
+            invincibleTimer = 0.1;
+        }
         changeAnimation(HERO_STATE_DASH, true);  // Chuyển sang animation lướt nhanh
         SoundManager::soundManager.playSound("dash");
     }
@@ -181,33 +182,28 @@ void Hero::changeAnimation(int newState, bool resetFrameToBeginning)
         currentFrame = currentAnim->getFrame(currentFrame->frameNumber);  // Giữ khung hiện tại
 }
 
-// Hàm cập nhật animation
-void Hero::updateAnimation()
+void Hero::updateAnimation() 
 {
     if (currentFrame == NULL || currentAnim == NULL)
         return;  // Không thể xử lý animation nếu thiếu con trỏ
 
-    // Nếu trạng thái là di chuyển nhưng không di chuyển, chuyển sang đứng yên
-    if (state == HERO_STATE_MOVE && !moving)
+    if (state == HERO_STATE_MOVE && !moving) 
     {
         changeAnimation(HERO_STATE_IDLE, true);
     }
-    // Nếu đang di chuyển nhưng trạng thái không phải di chuyển, chuyển sang trạng thái di chuyển
-    if (state != HERO_STATE_MOVE && moving)
+    if (state != HERO_STATE_MOVE && moving) 
     {
         changeAnimation(HERO_STATE_MOVE, true);
     }
 
     frameTimer += TimeController::timeController.dT;  // Cộng thêm thời gian delta
     // Nếu đã đến lúc chuyển khung hình
-    if (frameTimer >= currentFrame->duration)
+    if (frameTimer >= currentFrame->duration) 
     {
-        // Nếu đang ở khung cuối của animation
-        if (currentFrame->frameNumber == currentAnim->getEndFrameNumber())
+        if (currentFrame->frameNumber == currentAnim->getEndFrameNumber()) 
         {
-            if (state == HERO_STATE_SLASH || state == HERO_STATE_DASH)
+            if (state == HERO_STATE_SLASH || state == HERO_STATE_DASH) 
             {
-                // Quay lại trạng thái di chuyển sau khi tấn công hoặc lướt
                 changeAnimation(HERO_STATE_MOVE, true);
             }
             else if (state == HERO_STATE_DEAD && hp > 0)
@@ -215,15 +211,13 @@ void Hero::updateAnimation()
                 // Nếu đã chết nhưng máu hồi phục, đứng dậy
                 changeAnimation(HERO_STATE_MOVE, true);
             }
-            else
+            else 
             {
-                // Lặp lại animation từ đầu
                 currentFrame = currentAnim->getFrame(0);
             }
         }
-        else
+        else 
         {
-            // Chuyển sang khung hình tiếp theo
             currentFrame = currentAnim->getNextFrame(currentFrame);
         }
         frameTimer = 0;  // Đặt lại bộ đếm khung hình
