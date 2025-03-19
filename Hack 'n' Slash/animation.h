@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Animation 
+class Animation
 {
 public:
 	string name; // tên animation
