@@ -1,4 +1,6 @@
 ﻿#include "keyboardInput.h"
+#include <iostream> // Include the iostream header
+#include <vector>  // Include the vector header
 
 KeyboardInput::KeyboardInput()
 {
@@ -18,6 +20,16 @@ void KeyboardInput::update(SDL_Event* e)
     // xử lý phím bấm xuống
     if (e->type == SDL_KEYDOWN)
     {
+        // Thêm phím bấm vào bộ đệm
+        keyBuffer.push_back(e->key.keysym.scancode);
+        // Giới hạn kích thước bộ đệm
+        if (keyBuffer.size() > 4)
+        {
+            keyBuffer.pop_front();
+        }
+        // Kiểm tra mã Easter egg
+        checkEasterEgg();
+
         if (e->key.keysym.scancode == DASH)
         {
             hero->dash();
@@ -38,33 +50,53 @@ void KeyboardInput::update(SDL_Event* e)
     }
     else
     {
+        hero->moving = true;
         // di chuyển lên
         if (keystates[UP])
         {
-            // lên phải
             if (keystates[RIGHT])
-                hero->move(270 + 45);
+                hero->move(315); // lên phải
             else if (keystates[LEFT])
-                hero->move(270 - 45);
+                hero->move(225); // lên trái
             else
-                hero->move(270);
+                hero->move(270); // lên
         }
         // di chuyển xuống
-        if (keystates[DOWN])
+        else if (keystates[DOWN])
         {
-            // xuống phải
             if (keystates[RIGHT])
-                hero->move(90 - 45);
+                hero->move(45); // xuống phải
             else if (keystates[LEFT])
-                hero->move(90 + 45);
+                hero->move(135); // xuống trái
             else
-                hero->move(90);
+                hero->move(90); // xuống
         }
         // di chuyển trái
-        if (!keystates[UP] && !keystates[DOWN] && !keystates[RIGHT] && keystates[LEFT])
-            hero->move(180);
+        else if (keystates[LEFT])
+        {
+            hero->move(180); // trái
+        }
         // di chuyển phải
-        if (!keystates[UP] && !keystates[DOWN] && keystates[RIGHT] && !keystates[LEFT])
-            hero->move(0);
+        else if (keystates[RIGHT])
+        {
+            hero->move(0); // phải
+        }
+    }
+}
+
+void KeyboardInput::checkEasterEgg()
+{
+    // Mã Easter egg là "0000"
+    const std::vector<SDL_Scancode> easterEggCode =
+    {
+        SDL_SCANCODE_0, SDL_SCANCODE_0, SDL_SCANCODE_0, SDL_SCANCODE_0
+    };
+
+    // Kiểm tra nếu bộ đệm khớp với mã Easter egg
+    if (std::vector<SDL_Scancode>(keyBuffer.begin(), keyBuffer.end()) == easterEggCode)
+    {
+        hero->invincibleTimer = 99999999999999; // Đặt thời gian bất tử rất lớn
+        hero->damage = 99999999999999; // Tăng sát thương tối đa
+        std::cout << "Easter egg activated: hero damage = " << hero->damage << std::endl; // Add this line
     }
 }
