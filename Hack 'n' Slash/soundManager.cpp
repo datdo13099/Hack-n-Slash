@@ -1,37 +1,48 @@
 #include "soundManager.h"
 
+SoundManager SoundManager::soundManager;
+
 SoundManager::SoundManager()
 {
-
 }
 
 SoundManager::~SoundManager()
 {
-	for (list<soundListing>::iterator sl = sounds.begin(); sl != sounds.end(); sl++)
-	{
-		Mix_FreeChunk(sl->sound);
-	}
+    for (auto& sound : sounds)
+    {
+        Mix_FreeChunk(sound.sound);
+    }
+    sounds.clear();
 }
 
 void SoundManager::loadSound(string name, string file)
 {
-	soundListing listing;
-	listing.name = name;
-	listing.sound = Mix_LoadWAV(file.c_str());
-
-	sounds.push_back(listing);
+    Mix_Chunk* sound = Mix_LoadWAV(file.c_str());
+    if (sound != NULL)
+    {
+        soundListing newSound;
+        newSound.sound = sound;
+        newSound.name = name;
+        sounds.push_back(newSound);
+    }
 }
 
 void SoundManager::playSound(string name)
 {
-	for(list<soundListing>::iterator sl = sounds.begin(); sl != sounds.end(); sl++)
-	{
-		if (sl->name == name)
-		{
-			Mix_PlayChannel(-1, sl->sound, 0);
-			break;
-		}
-	}
+    for (auto& sound : sounds)
+    {
+        if (sound.name == name)
+        {
+            Mix_PlayChannel(-1, sound.sound, 0);
+            break;
+        }
+    }
 }
 
-SoundManager SoundManager::soundManager;
+void SoundManager::setAllSoundVolume(int volume)
+{
+    for (auto& sound : sounds)
+    {
+        Mix_VolumeChunk(sound.sound, volume);
+    }
+}
