@@ -45,6 +45,7 @@ public:
     float thinkTimer = 0;                          // Thời gian suy nghĩ, khi bằng 0 thì chọn hành động AI
     LivingEntity* target = NULL;                   // Con trỏ tới mục tiêu cần đuổi theo
     int aiState = GLOB_AI_NORMAL;                  // Trạng thái AI hiện tại, mặc định là bình thường
+    float speed = 0;                               // Tốc độ di chuyển của Glob
 
     // Khai báo các hàm thành viên
     Glob(AnimationSet* animSet);                   // Hàm khởi tạo với tập hợp animation

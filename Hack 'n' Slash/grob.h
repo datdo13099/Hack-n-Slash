@@ -26,6 +26,7 @@ public:
 
     // Khi giá trị này là 0, nghĩ ra việc mới để làm (dùng cho AI)
     float thinkTimer = 0;
+    float speed = 0; // Tốc độ di chuyển của Grob
 
     // Các hàm chính
     Grob(AnimationSet* animSet);
