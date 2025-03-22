@@ -302,6 +302,12 @@ float Entity::distanceBetweenTwoPoints(float cx1, float cy1, float cx2, float cy
 
 float Entity::angleBetweenTwoEntities(Entity* e1, Entity* e2)
 {
+    if (e1 == nullptr || e2 == nullptr)
+    {
+        // xử lý lỗi một cách phù hợp, ví dụ như trả về giá trị mặc định hoặc ghi log lỗi để theo dõi.
+        return 0.0f;
+    }
+
     float dx, dy;
     float x1 = e1->x, y1 = e1->y, x2 = e2->x, y2 = e2->y;
 

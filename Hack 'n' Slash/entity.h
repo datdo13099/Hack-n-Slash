@@ -1,9 +1,11 @@
 ﻿#ifndef ENTITY  // Kiểm tra nếu ENTITY chưa được định nghĩa
 #define ENTITY  // Định nghĩa ENTITY để tránh include file nhiều lần
 
-#include "globals.h"         // Bao gồm file header chứa các định nghĩa toàn cục
-#include "timeController.h"  // Bao gồm file header của lớp TimeController
-#include "animationSet.h"    // Bao gồm file header của lớp AnimationSet
+#include <limits>
+#include <algorithm>
+#include "globals.h"
+#include "timeController.h"
+#include "animationSet.h"
 
 // Lớp trừu tượng (Abstract Class). Không thể khởi tạo trực tiếp đối tượng kiểu Entity, ví dụ: Entity e;
 class Entity
