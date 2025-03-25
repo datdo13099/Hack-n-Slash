@@ -17,6 +17,7 @@ public:
     virtual void updateDamages() = 0;  // Hàm ảo thuần túy: cách thực thể bị tổn thương bởi các yếu tố khác (do lớp con định nghĩa)
     virtual void die() = 0;  // Hàm ảo thuần túy: cách thực thể chết (do lớp con quyết định)
     virtual void updateInvincibleTimer();  // Hàm ảo cập nhật bộ đếm thời gian bất tử
+    virtual void hitLanded(LivingEntity* entity) { ; } // khi đánh trúng một thực thể khác (có thể override)
 
     void draw();  // Ghi đè (override) hàm draw của lớp Entity để vẽ thực thể sống
 };
