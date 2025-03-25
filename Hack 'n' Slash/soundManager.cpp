@@ -46,3 +46,13 @@ void SoundManager::setAllSoundVolume(int volume)
         Mix_VolumeChunk(sound.sound, volume);
     }
 }
+
+void SoundManager::muteAllSounds()
+{
+    setAllSoundVolume(0);
+}
+
+void SoundManager::unmuteAllSounds()
+{
+    setAllSoundVolume(MIX_MAX_VOLUME);
+}

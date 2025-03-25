@@ -22,6 +22,8 @@ public:
     void loadSound(string name, string file);
     void playSound(string name);
     void setAllSoundVolume(int volume);
+    void muteAllSounds(); 
+    void unmuteAllSounds();
 
     static SoundManager soundManager;
 };
