@@ -4,7 +4,8 @@
 #include "livingEntity.h" // Include file định nghĩa lớp LivingEntity
 #include <SDL.h> // Include thư viện SDL để sử dụng SDL_Color, SDL_Rect, v.v.
 
-class HPBar // Định nghĩa lớp HPBar để biểu diễn thanh máu (HP bar)
+// Lớp HPBar: Biểu diễn thanh máu (HP bar) của một thực thể sống
+class HPBar
 {
 public:
     int x, y; // Tọa độ x, y của thanh HP trên màn hình
