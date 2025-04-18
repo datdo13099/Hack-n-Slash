@@ -11,7 +11,6 @@
 # bỏ folder build và debug
 Debug/
 Release/
-x64/
 .vs/
 
 # bỏ file hệ thống
