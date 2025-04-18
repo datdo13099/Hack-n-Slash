@@ -8,6 +8,10 @@
 *.pdb
 *.ipch
 
+x64/
+*.exe
+*.dll
+
 # bỏ folder build và debug
 Release/
 .vs/
