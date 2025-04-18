@@ -9,7 +9,6 @@
 *.ipch
 
 # bỏ folder build và debug
-Debug/
 Release/
 .vs/
 

@@ -1,0 +1,16 @@
+﻿  animationSet.cpp
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupBox.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'animationSet.cpp')
+  
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupPosition.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'animationSet.cpp')
+  
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\GroupNumber.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'animationSet.cpp')
+  
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupString.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'animationSet.cpp')
+  
+  Hack 'n' Slash.vcxproj -> C:\Users\datdo\Desktop\Hack-n-Slash\x64\Debug\Hack 'n' Slash.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
