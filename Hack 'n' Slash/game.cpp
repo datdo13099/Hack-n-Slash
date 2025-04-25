@@ -52,9 +52,6 @@ Game::Game()
     globAnimSet = new AnimationSet();
     globAnimSet->loadAnimationSet("glob.fdset", dataGroupTypes, true, 0, true);
 
-    grobAnimSet = new AnimationSet();
-    grobAnimSet->loadAnimationSet("grob.fdset", dataGroupTypes, true, 0, true);
-
     wallAnimSet = new AnimationSet();
     wallAnimSet->loadAnimationSet("wall.fdset", dataGroupTypes);
 
@@ -147,7 +144,6 @@ Game::~Game()
     // Dọn dẹp animation
     delete heroAnimSet;
     delete globAnimSet;
-    delete grobAnimSet;
     delete wallAnimSet;
     delete bossAnimSet;
     delete bulletAnimSet;
@@ -267,19 +263,6 @@ void Game::update()
                 {
                     int x = getRandomNumber(Globals::ScreenWidth - (2 * 32) - 32) + 32 + 16;
                     int y = getRandomNumber(Globals::ScreenHeight - (2 * 32) - 32) + 32 + 16;
-
-                    Grob* enemy = new Grob(grobAnimSet);
-                    enemy->x = x;
-                    enemy->y = y;
-                    enemy->invincibleTimer = 0.1;
-                    enemy->speed *= 1.0 + (currentRound - 1) * 0.2;
-                    enemy->damage = 5 * currentRound;
-                    enemy->hp = 1;
-
-                    enemies.push_back(enemy);
-                    Entity::entities.push_back(enemy);
-                    enemiesBuilt++;
-                    enemyBuildTimer = 0.5;
                 }
             }
 
@@ -339,17 +322,6 @@ void Game::update()
                 {
                     int x = getRandomNumber(Globals::ScreenWidth - (2 * 32) - 32) + 32 + 16;
                     int y = getRandomNumber(Globals::ScreenHeight - (2 * 32) - 32) + 32 + 16;
-
-                    Grob* enemy = new Grob(grobAnimSet);
-                    enemy->x = x;
-                    enemy->y = y;
-                    enemy->invincibleTimer = 0.1;
-                    enemy->speed *= 1.0 + (currentRound - 1) * 0.2;
-                    enemy->damage = 5 * currentRound;
-                    enemy->hp = 1;
-
-                    enemies.push_back(enemy);
-                    Entity::entities.push_back(enemy);
                 }
 
                 bossActive = true;
@@ -414,7 +386,8 @@ void Game::draw()
             {
                 SDL_Color color = { 255, 255, 255, 255 };
                 stringstream ss;
-                ss << "so quai vat da tieu diet: " << Glob::globsKilled + Grob::grobsKilled + Boss::bossesKilled;                string resPath = getResourcePath();
+                ss << "so quai vat da tieu diet: " << Glob::globsKilled + Boss::bossesKilled;                
+                string resPath = getResourcePath();
                 scoreTexture = renderText(ss.str(), resPath + "font.ttf", color, 30, Globals::renderer);
             }
             renderTexture(scoreTexture, Globals::renderer, 20, 50);
@@ -542,59 +515,49 @@ void Game::setEnemyCounts(int round)
     {
     case 1:
         numGlobs = 20;
-        numGrobs = 5;
         bossCount = 0;
         break;
     case 2:
-        numGlobs = 25;
-        numGrobs = 7;
+        numGlobs = 24; 
         bossCount = 0;
         break;
     case 3:
         numGlobs = 20;
-        numGrobs = 5;
         bossCount = 1;
         break;
     case 4:
         numGlobs = 30;
-        numGrobs = 5;
         bossCount = 0;
         break;
     case 5:
-        numGlobs = 35;
-        numGrobs = 7;
+        numGlobs = 34; 
         bossCount = 0;
         break;
     case 6:
-        numGlobs = 30;
-        numGrobs = 5;
+        numGlobs = 30; 
         bossCount = 2;
         break;
     case 7:
         numGlobs = 40;
-        numGrobs = 5;
         bossCount = 0;
         break;
     case 8:
-        numGlobs = 45;
-        numGrobs = 7;
+        numGlobs = 44;
         bossCount = 0;
         break;
     case 9:
         numGlobs = 40;
-        numGrobs = 5;
         bossCount = 3;
         break;
     case 10:
         numGlobs = 50;
-        numGrobs = 10;
         bossCount = 4;
         break;
     default:
         numGlobs = 0;
-        numGrobs = 0;
         bossCount = 0;
         break;
+
     }
 }
 
@@ -603,7 +566,7 @@ void Game::setupNextRound()
     setEnemyCounts(currentRound);
     enemiesBuilt = 0;
     enemyBuildTimer = 4;
-    enemiesToBuild = numGlobs + numGrobs;
+    enemiesToBuild = numGlobs;
 
     if (bossCount > 0)
     {
