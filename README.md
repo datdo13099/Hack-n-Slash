@@ -30,7 +30,7 @@ Một tựa game **Hack 'n' Slash** cực cháy, nơi người chơi nhập vai 
 
 ---
 
-## 🎮 Cấu trúc game
+## 🗺️ Cấu trúc game
 
 **Tổng số màn chơi:** 10  
 **Số lượng quái vật và boss trong mỗi màn:**  
