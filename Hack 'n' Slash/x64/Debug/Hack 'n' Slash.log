@@ -1,16 +1,42 @@
-﻿  animationSet.cpp
+﻿  game.cpp
 C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupBox.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'animationSet.cpp')
+  (compiling source file 'game.cpp')
   
 C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupPosition.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'animationSet.cpp')
+  (compiling source file 'game.cpp')
   
 C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\GroupNumber.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'animationSet.cpp')
+  (compiling source file 'game.cpp')
   
 C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\groupString.h(18,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'animationSet.cpp')
+  (compiling source file 'game.cpp')
   
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(65,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(66,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(73,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(80,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(81,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(86,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(87,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(94,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(95,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(100,43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(101,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(264,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(265,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(266,46): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(267,41): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(293,46): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(299,91): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(300,92): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(316,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(330,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(331,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(332,46): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(333,41): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(490,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(491,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\datdo\Desktop\Hack-n-Slash\Hack 'n' Slash\game.cpp(514,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Hack 'n' Slash.vcxproj -> C:\Users\datdo\Desktop\Hack-n-Slash\x64\Debug\Hack 'n' Slash.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

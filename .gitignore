@@ -1,21 +1,44 @@
-# bỏ mấy file của visual studio
-*.sln
-*.suo
-*.sdf
-*.vcxproj*
-*.user
-*.ncb
-*.pdb
-*.ipch
-
-x64/
-*.exe
-*.dll
-
-# bỏ folder build và debug
-Release/
+# Visual Studio - General
 .vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
 
-# bỏ file hệ thống
-.DS_Store
-Thumbs.db
+# Build results
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.log
+*.tlog
+*.obj
+*.pch
+*.pdb
+*.idb
+*.ipch
+*.res
+*.ilk
+*.aps
+*.ncb
+
+# Other
+*.exe
+*.bak
+*.tmp
+*.cache
+*.class
+*.psd
+*.sdf
+
+# CMake (nếu dùng)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore backup files
+*~
+*.orig
+*.swp
