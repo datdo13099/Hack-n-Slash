@@ -1,0 +1,135 @@
+cyborg boss.png
+animations: 7
+idle
+frames: 2
+frame
+clip: 30 0 138 200
+offset: 65 108
+duration: 0.5
+index: 0
+frame
+clip: 230 0 135 200
+offset: 74 114
+duration: 0.5
+index: 1
+slam
+frames: 6
+frame
+clip: 438 0 126 200
+offset: 76 109
+duration: 0.1
+index: 0
+frame
+clip: 636 0 122 200
+offset: 61 143
+duration: 0.5
+index: 1
+frame
+clip: 840 0 129 200
+offset: 64 126
+duration: 0.05
+index: 2
+frame
+clip: 1000 0 220 200
+offset: 58 99
+duration: 0.1
+index: 3
+hitBox: 5 37 115 200
+damage: 5
+frame
+clip: 1230 0 150 200
+offset: 58 99
+duration: 0.4
+index: 4
+frame
+clip: 1435 0 138 200
+offset: 63 102
+duration: 0.5
+index: 5
+charge
+frames: 3
+frame
+clip: 1630 0 135 200
+offset: 59 116
+duration: 0.5
+index: 0
+frame
+clip: 1850 0 110 200
+offset: 80 114
+duration: 0.5
+index: 1
+frame
+clip: 1990 0 220 200
+offset: 89 109
+duration: 0.5
+index: 2
+shoot
+frames: 1
+frame
+clip: 2001 40 189 123
+offset: 97 111
+duration: 0.5
+index: 0
+jumpTelegraph
+frames: 1
+frame
+clip: 2440 38 140 152
+offset: 67 86
+duration: 0.5
+index: 0
+jump
+frames: 4
+frame
+clip: 2630 0 135 190
+offset: 61 145
+duration: 0.1
+index: 0
+frame
+clip: 2830 0 138 190
+offset: 78 141
+duration: 0.4
+index: 1
+frame
+clip: 3025 0 137 190
+offset: 71 142
+duration: 0.1
+index: 2
+frame
+clip: 3239 37 133 153
+offset: 91 96
+duration: 0.2
+index: 3
+hitBox: 11 64 178 43
+damage: 10
+die
+frames: 6
+frame
+clip: 3630 0 140 200
+offset: 85 131
+duration: 0.3
+index: 0
+frame
+clip: 3830 0 140 200
+offset: 95 104
+duration: 0.2
+index: 1
+frame
+clip: 4025 0 145 200
+offset: 105 120
+duration: 0.2
+index: 2
+frame
+clip: 4260 0 95 200
+offset: 86 166
+duration: 0.1
+index: 3
+frame
+clip: 4425 0 90 200
+offset: 85 174
+duration: 0.1
+index: 4
+frame
+clip: 4630 0 85 200
+offset: 66 158
+duration: 0.1
+index: 5

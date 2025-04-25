@@ -4,17 +4,6 @@
 *.suo
 *.vcxproj.user
 
-# Build output
-Debug/
-Release/
-x64/
-x86/
-*.obj
-*.pdb
-*.exe
-*.ilk
-*.log
-
 # CMake (nếu có)
 CMakeFiles/
 CMakeCache.txt
