@@ -1,44 +1,39 @@
-# Visual Studio - General
+# Visual Studio
 .vs/
 *.user
 *.suo
-*.VC.db
-*.VC.opendb
+*.vcxproj.user
 
-# Build results
-[Bb]uild/
-[Dd]ebug/
-[Rr]elease/
+# Build output
+Debug/
+Release/
 x64/
 x86/
-*.log
-*.tlog
 *.obj
-*.pch
 *.pdb
-*.idb
-*.ipch
-*.res
-*.ilk
-*.aps
-*.ncb
-
-# Other
 *.exe
-*.bak
-*.tmp
-*.cache
-*.class
-*.psd
-*.sdf
+*.ilk
+*.log
 
-# CMake (nếu dùng)
+# CMake (nếu có)
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 
-# Ignore backup files
-*~
-*.orig
-*.swp
+# SDL2 nếu bạn thêm lib động/dll
+*.dll
+
+# Backup / temp files
+*.tmp
+*.bak
+*.log
+*.cache
+*.db
+Thumbs.db
+
+
+# GitHub Copilot (user-specific files or temp data)
+*.copilot*
+*.copilot-info
+copilot.*
