@@ -5,7 +5,7 @@
 Một tựa game **Hack 'n' Slash** cực cháy, nơi người chơi nhập vai chiến binh dũng mãnh, lao vào các trận chiến kịch tính với quái vật đông đảo.
 
 ---
-# 📚 Mục Lục
+## 📚 Mục Lục
 
 - [⚔️ Hack 'n' Slash 🩸](#-hack-n-slash-)
   - [🏆 Tính năng nổi bật](#-tính-năng-nổi-bật)
