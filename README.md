@@ -5,6 +5,21 @@
 Một tựa game **Hack 'n' Slash** cực cháy, nơi người chơi nhập vai chiến binh dũng mãnh, lao vào các trận chiến kịch tính với quái vật đông đảo.
 
 ---
+# 📚 Mục Lục
+
+- [⚔️ Hack 'n' Slash 🩸](#-hack-n-slash-)
+  - [🏆 Tính năng nổi bật](#-tính-năng-nổi-bật)
+  - [📣 Giới thiệu game](#-giới-thiệu-và-phá-đảo-game)
+  - [🎮 Hướng dẫn chơi](#-hướng-dẫn-chơi)
+  - [🗺️ Cấu trúc game](#-cấu-trúc-game)
+  - [🛠️ Hướng dẫn chạy game](#-hướng-dẫn-chạy-game)
+    - [1. Cài đặt cho giảng viên (Visual Studio)](#1-hướng-dẫn-cài-đặt-và-mở-project-cho-giảng-viên-visual-studio)
+    - [2. Cài đặt cho người dùng (Releases)](#2-hướng-dẫn-cài-đặt-và-chạy-game-cho-người-dùng-thông-qua-releases)
+  - [📁 Cấu trúc dự án](#-cấu-trúc-dự-án)
+  - [🎨 Tài nguyên](#-nguồn-tài-nguyên)
+  - [🔗 Liên hệ](#-thông-tin-liên-hệ)
+
+---
 
 ## 🏆 Tính năng nổi bật
 - ⚔️ Chặt chém đã tay với combo mượt mà.
