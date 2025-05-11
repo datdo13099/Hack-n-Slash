@@ -275,6 +275,7 @@ Một tựa game **Hack 'n' Slash** cực cháy, nơi người chơi nhập vai 
 - [Lucifer Necromancer - Foozlecc](https://foozlecc.itch.io/lucifer-necromancer)  
 - [Lucifer Skeleton King Boss - Foozlecc](https://foozlecc.itch.io/lucifer-skeleton-king-boss)  
 - [Tổng hợp game assets miễn phí - Itch.io](https://itch.io/game-assets)
+- [Res](https://github.com/randyrossi/carousel/blob/master/src/res_path.cpp)
 
 ---
 
